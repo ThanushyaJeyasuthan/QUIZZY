@@ -11,7 +11,7 @@ if (ini_get("session.use_cookies")) {
 }
 session_destroy();
 
-// after logout go to login_regitser page 
+// after logout go to login_regitser page
 header("Location: login_register.php?message=Logged out successfully");
 exit();
 ?>
