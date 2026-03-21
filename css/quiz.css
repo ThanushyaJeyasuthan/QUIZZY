@@ -1,0 +1,109 @@
+
+.quiz-box {
+    background-color: #0a192f; 
+    width: 90%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+.question-box {
+    color: white;
+    font-weight: 600;
+}
+
+.options-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+.opt {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+.opt:hover {
+    background-color: #0a192f !important; 
+    color: rgb(12, 12, 12) !important;            
+    border-color: #0a192f;
+}
+
+
+.progress {
+    height: 10px !important;
+    background-color: #e2e8f0 !important;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    background-color: rgb(132, 205, 181) !important;
+}
+
+
+.option-btn {
+    background-color: white; 
+    border: 2px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+
+.option-btn:hover {
+    background-color:#0a192f !important; 
+    color: white !important;
+    border-color: rgb(24, 27, 26) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.btn-success {
+    background-color: rgb(11, 222, 18) !important;
+    border-color: rgb(132, 205, 181) !important;
+}
+.btn-failure{
+    background-color: rgb(222, 11, 11) !important;
+    border-color: rgb(132, 205, 181) !important;
+}
+.card {
+    background-color: #ffffff;
+    border: 7px solid rgb(132, 205, 181);
+}
+
+
+
+#questionHeader {
+    background-color: #0a192f !important; 
+    color: white;
+}
+
+
+.options-area {
+    background-color: #ffffff;
+}
+
+
+.btn-success {
+    background-color: rgb(10, 236, 33) !important;
+    border-color: rgb(110, 180, 155) !important;
+    color: #0a192f !important; 
+    font-weight: bold;
+}
+
+
+#nextBtn {
+    background-color: #0a192f;
+    border: none;
+}
