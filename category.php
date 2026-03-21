@@ -1,0 +1,135 @@
+<?php
+session_start();
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZY-Category</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+    <nav class="navbar navbar-expand-lg border-bottom sticky-top" style="background-color: #0a192f;">
+        <div class="container text-light">
+            <div class="logo me-3">💡</div> <b>QUIZZY</b>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fs-5 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="category.php">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="result_feedback.php">Results</a>
+                    </li>
+                    
+			<?php if(isset($_SESSION['user_id'])): ?>
+                        <li class="nav-item ms-lg-3">
+                            <a href="auth/logout.php" class="btn btn-outline-light btn-sm rounded-pill px-3">Logout</a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-sm btn-light rounded-pill px-4 text-dark fw-bold" href="auth/login_register.php">Login</a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-auto py-4">
+        <div class="text-center mb-5">
+            <h1 class="display-4 mb-2">Pick Your Challenge</h1>
+            <p class="text-secondary lead">Select a subject to test your academic skills</p>
+        </div>
+
+        <div class="row g-4 justify-content-center mb-5">
+            
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 text-center border-0 shadow-sm rounded-4 category-card p-4" style="background-color: rgb(132, 205, 181);">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mb-4 border" style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-calculator fa-2x text-muted"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-4 text-dark">Maths</h4>
+                        <a href="quiz.php?category=maths" class="btn custom-btn btn-sm px-5 rounded-pill fw-bold mt-auto shadow-sm text-light" style="background-color:#0a192f; font-size:20px; font-family:'Lucida Sans', sans-serif;">Start Quiz</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 text-center border-0 shadow-sm rounded-4 category-card p-4" style="background-color: rgb(132, 205, 181);">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mb-4 border" style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-lightbulb fa-2x text-muted"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-4 text-dark">General Knowledge</h4>
+                        <a href="quiz.php?category=gk" class="btn custom-btn btn-sm px-5 rounded-pill fw-bold mt-auto shadow-sm text-light" style="background-color:#0a192f; font-size:20px; font-family:'Lucida Sans', sans-serif;">Start Quiz</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 text-center border-0 shadow-sm rounded-4 category-card p-4" style="background-color: rgb(132, 205, 181);">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mb-4 border" style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-code fa-2x text-muted"></i>
+                        </div>
+                        <h4 class="card-title fw-bold mb-4 text-dark">IT</h4>
+                        <a href="quiz.php?category=it" class="btn custom-btn btn-sm px-5 rounded-pill fw-bold mt-auto shadow-sm text-light" style="background-color:#0a192f; font-size:20px; font-family:'Lucida Sans', sans-serif;">Start Quiz</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card border-0 shadow-lg rounded-4 mt-5">
+            <div class="card-body p-4 p-md-5" style="background-color: #1a202c; border-radius: 1.5rem;">
+                <h3 class="text-center fw-bold text-light mb-4 pb-3 border-bottom" style="border-color: rgba(255,255,255,0.1) !important;">
+                    How it works
+                </h3>
+                <div class="row text-center position-relative">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="bg-navy-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm mb-3" style="width: 70px; height: 70px; background: rgba(255,255,255,0.05);">
+                            <i class="fa-solid fa-magnifying-glass text-light fs-4"></i>
+                        </div>
+                        <p class="fw-semibold text-light opacity-75 mb-0">Step 1: Choose a topic</p>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="bg-navy-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm mb-3" style="width: 70px; height: 70px; background: rgba(255,255,255,0.05);">
+                            <i class="fa-solid fa-stopwatch text-light fs-4"></i>
+                        </div>
+                        <p class="fw-semibold text-light opacity-75 mb-0">Step 2: Answer 10 questions</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-navy-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm mb-3" style="width: 70px; height: 70px; background: rgba(255,255,255,0.05);">
+                            <i class="fa-solid fa-award text-light fs-4"></i>
+                        </div>
+                        <p class="fw-semibold text-light opacity-75 mb-0">Step 3: Check your score</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.php" class="btn btn-outline-dark rounded-pill px-4">← Return to Home</a>
+        </div>
+    </main>
+
+    <footer class="py-3 mt-auto border-top" style="background-color: #0a192f;">
+        <div class="container text-center">
+            <small class="fw-medium text-light">Created By Thanushya Jeyasuthan © 2026.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
