@@ -1,5 +1,5 @@
 
-// Questions 
+// Questionns 
 const quizData = {
     maths: [
         { q: "What is 15 + 23?", options: ["35", "38", "40", "36"], answer: 1, explanation: "15 + 23 equals 38." },
