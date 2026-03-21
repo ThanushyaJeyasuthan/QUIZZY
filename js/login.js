@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         localStorage.setItem('userStatus', 'logged-in');
-        // go to category page
+        // go to category pag
         window.location.href = 'category.html';
     });
 
