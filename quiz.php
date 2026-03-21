@@ -2,7 +2,7 @@
 session_start();
 
 
-// Get the subject from the URL 
+// Get the subject from the URL
 $subject = isset($_GET['subject']) ? htmlspecialchars($_GET['subject']) : 'General';
 ?>
 
