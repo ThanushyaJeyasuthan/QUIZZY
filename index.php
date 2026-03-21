@@ -25,7 +25,7 @@ session_start();
             border-radius: 15px;
             overflow: hidden;
         }
-        /* Match your dark blue theme */
+        
         .navbar, footer {
             background-color: #0a192f !important;
         }
@@ -33,6 +33,7 @@ session_start();
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-light">
+	
     <nav class="navbar navbar-expand-lg border-bottom sticky-top">
         <div class="container text-light">
             <div class="logo me-3">💡</div> <b>QUIZZY</b>
