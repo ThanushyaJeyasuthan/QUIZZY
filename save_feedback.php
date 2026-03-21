@@ -1,6 +1,6 @@
 <?php
 session_start();
-// connect with the databse
+// connect with the database
 include 'includes/db.php';
 
 header('Content-Type: application/json');
