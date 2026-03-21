@@ -35,7 +35,7 @@ Feedback Management:
     * **WAMP:** `C:\wamp64\www\`
 3.  Open your browser and type: `http://localhost/QUIZZY/index.php`.
 
-## 📂 New Components
+## New Components
 * **/auth** - PHP logic for registration and login.
 * **/includes** - Database connection settings (`db.php`).
 * **quizzy.sql** - Full database export for easy setup.
